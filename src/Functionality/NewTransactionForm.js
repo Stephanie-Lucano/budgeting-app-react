@@ -39,10 +39,10 @@ const NewTransactionForm = () => {
                 onChange={handleTextChange}
                 required
                 />
-                <label htmlFor="name">Name</label>
+                <label htmlFor="source">Name</label>
                 <input
-                id="name"
-                value={transaction.name}
+                id="source"
+                value={transaction.source}
                 type="text"
                 onChange={handleTextChange}
                 required
