@@ -4,7 +4,7 @@ const SingleTransaction = ({transaction, index}) => {
     return (
         <tr className="SingleTransaction">
             <td>{transaction.date}</td>
-            <td>{transaction.source}</td>
+            <td>{transaction.name}</td>
             <td>
                 <Link to={`/transactions/${index}`}>
                     {transaction.amount}

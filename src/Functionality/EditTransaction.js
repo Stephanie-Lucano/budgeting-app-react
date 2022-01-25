@@ -46,10 +46,10 @@ const EditTransaction = () => {
                 onChange={handleTextChange}
                 required
                 />
-                <label htmlFor="source">Name</label>
+                <label htmlFor="name">Name</label>
                 <input
-                id="source"
-                value={transaction.source}
+                id="name"
+                value={transaction.name}
                 type="text"
                 onChange={handleTextChange}
                 required
