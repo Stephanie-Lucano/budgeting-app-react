@@ -14,7 +14,7 @@ const ShowTransaction = () => {
             .then((response) => {
                 setTransaction(response.data)
             })
-    }, [])
+    }, [URL, id])
 
     const handleDelete = (event) => {
         axios

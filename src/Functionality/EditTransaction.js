@@ -20,7 +20,7 @@ const EditTransaction = () => {
             .then((response) => {
                 setTransaction(response.data)
             })
-    }, [])
+    }, [URL, id])
 
     const handleTextChange = (event) => {
         setTransaction({
