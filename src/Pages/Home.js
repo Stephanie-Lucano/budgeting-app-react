@@ -1,4 +1,6 @@
 import Logo from "../Assests/Budget.png"
+import './App.css';
+
 const Home = () => {
     return (
         <div className="Home">
