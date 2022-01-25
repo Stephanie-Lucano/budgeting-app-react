@@ -1,5 +1,4 @@
 import AllTransactions from "../Functionality/AllTransactions"
-import "../App.css"
 
 const Index = () => {
     return (
