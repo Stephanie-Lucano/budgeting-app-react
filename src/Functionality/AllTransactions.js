@@ -16,6 +16,13 @@ const AllTransactions = () => {
 
     return (
         <div className="AllTransactions">
+            <header>
+                {"Amount Paid: $" + transactions.map((transaction) => {
+                    return Number(transaction.amount)
+                }).reduce((previousValue, currentValue) => {
+                    return previousValue + currentValue
+                })}
+            </header>
             <section>
                 <table>
                     <thead>
