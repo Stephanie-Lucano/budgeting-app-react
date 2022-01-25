@@ -34,7 +34,7 @@ const ShowTransaction = () => {
                 <h2>{transaction.category}</h2>
             </article>
             <aside>
-                <Link to="/transactions"><button>Back</button></Link>
+                <Link to={"/transactions"}><button>Back</button></Link>
                 <Link to={`/transactions/${id}/edit`}><button>Edit</button></Link>
                 <button onClick={handleDelete}>Delete</button>
             </aside>

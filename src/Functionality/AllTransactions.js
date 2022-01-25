@@ -14,25 +14,21 @@ const AllTransactions = () => {
             })
     }, [URL])
 
+    const bills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
+    0))*-1
+    console.log(bills)
+
     return (
         <div className="AllTransactions">
             <header>
                 <div className="Money">
-                {"I'ma tip myself: $" + transactions.map((transaction) => {
-                    return Number(transaction.amount)
-                }).reduce((previousValue, currentValue) => {
-                    return previousValue + currentValue
-                })}
+                {"I'ma tip myself: $" + 
+                    transactions.reduce((previousValue, currentValue) => previousValue + currentValue.amount,
+                    0)
+                }
                 </div>
                 <div className="Bills">
-                    {"Spent on Bills: $" + transactions.map((transaction) => {
-                        if (Number(transaction.amount) < 0) {
-                            return Number(-transaction.amount)
-                        } return 0
-                    }).reduce((previousValue, currentValue) => {
-                        return previousValue + currentValue
-                    })
-                    }
+                    {"Spent on Bills: $" + bills}
                 </div>
             </header>
             <section>
