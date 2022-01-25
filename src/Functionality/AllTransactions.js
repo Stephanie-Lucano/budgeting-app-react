@@ -12,16 +12,28 @@ const AllTransactions = () => {
             .then((response) => {
                 setTransactions(response.data)
             })
-    }, [])
+    }, [URL])
 
     return (
         <div className="AllTransactions">
             <header>
-                {"Amount Paid: $" + transactions.map((transaction) => {
+                <div className="Money">
+                {"I'ma tip myself: $" + transactions.map((transaction) => {
                     return Number(transaction.amount)
                 }).reduce((previousValue, currentValue) => {
                     return previousValue + currentValue
                 })}
+                </div>
+                <div className="Bills">
+                    {"Spent on Bills: $" + transactions.map((transaction) => {
+                        if (Number(transaction.amount) < 0) {
+                            return Number(-transaction.amount)
+                        } return 0
+                    }).reduce((previousValue, currentValue) => {
+                        return previousValue + currentValue
+                    })
+                    }
+                </div>
             </header>
             <section>
                 <table>
