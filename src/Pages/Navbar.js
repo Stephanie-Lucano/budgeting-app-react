@@ -7,12 +7,9 @@ const Navbar = () => {
             <Link to="/">
                 <img src={Logo} alt="Budgeting" width="200" height="150" />
             </Link>
-            <button>
-                <Link to="/transactions">Index</Link>
-            </button>
-            <button>
-                <Link to="/transactions/new">New</Link>
-            </button>
+            <Link to="/transactions"><button>Index</button></Link>
+            <Link to="/transactions/new"><button>New</button></Link>
+            
         </div>
     )
 }
