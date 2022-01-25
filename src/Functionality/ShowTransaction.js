@@ -28,7 +28,7 @@ const ShowTransaction = () => {
         <div className="ShowTransaction">
             <article>
                 <h1>{transaction.date}</h1>
-                <h2>{transaction.source}</h2>
+                <h2>{transaction.name}</h2>
                 <h2>{"$"+ transaction.amount}</h2>
                 <h2>{transaction.from}</h2>
                 <h2>{transaction.category}</h2>
