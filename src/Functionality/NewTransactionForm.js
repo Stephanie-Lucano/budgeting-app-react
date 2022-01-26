@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 const NewTransactionForm = () => {
     const navigate = useNavigate()
     const URL = process.env.REACT_APP_API_URL
+    console.log(URL)
     const [transaction, setTransaction] = useState({
         date: "",
         name: "",
@@ -18,14 +19,17 @@ const NewTransactionForm = () => {
             ...transaction, [event.target.id] : event.target.value
         })
     }
+    
+    const addTransaction = (newTransaction => {
+        axios
+        .put(`${URL}/transactions`, newTransaction)
+        .then(() => navigate("/transactions"))
+    })
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios
-            .post(`${URL}/transactions`, transaction)
-            .then(() => {
-                navigate("/transactions")
-            })
+        console.log(transaction)
+        addTransaction(transaction)
     }
 
     return (
