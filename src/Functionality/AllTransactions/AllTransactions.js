@@ -15,7 +15,7 @@ const AllTransactions = () => {
                 setTransactions(response.data)
             })
     }, [URL])
-    const moneyLeft = transactions.reduce((previousValue, currentValue) => previousValue + currentValue.amount,
+    const moneyLeft = transactions.map((transaction) => Number(transaction.amount)).reduce((previousValue, currentValue) => previousValue + currentValue,
     0)
     const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
