@@ -27,11 +27,10 @@ const ShowTransaction = () => {
     return (
         <div className="ShowTransaction">
             <article>
-                <h1>{transaction.date}</h1>
-                <h2>{transaction.name}</h2>
-                <h2>{"$"+ transaction.amount}</h2>
-                <h2>{transaction.from}</h2>
-                <h2>{transaction.category}</h2>
+                <h3>{transaction.date}</h3>
+                <p>{transaction.name} <span>{"$"+ transaction.amount}</span></p>
+                <p>{transaction.from}</p>
+                <p>{transaction.category}</p>
             </article>
             <aside>
                 <Link to={"/transactions"}><button>Back</button></Link>
