@@ -22,6 +22,7 @@ const EditTransaction = () => {
             })
     }, [URL, id])
 
+    
     const handleTextChange = (event) => {
         setTransaction({
             ...transaction, [event.target.id]: event.target.value
