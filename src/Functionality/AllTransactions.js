@@ -10,6 +10,7 @@ const AllTransactions = () => {
         axios
             .get(`${URL}/transactions`)
             .then((response) => {
+                console.log(URL)
                 setTransactions(response.data)
             })
     }, [URL])
