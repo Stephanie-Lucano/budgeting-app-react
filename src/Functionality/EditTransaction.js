@@ -18,7 +18,6 @@ const EditTransaction = () => {
         axios
             .get(`${URL}/transactions/${id}`)
             .then((response) => {
-                console.log(URL)
                 setTransaction(response.data)
             })
     }, [URL, id])

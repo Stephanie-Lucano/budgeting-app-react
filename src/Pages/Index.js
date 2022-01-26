@@ -1,9 +1,9 @@
-import AllTransactions from "../Functionality/AllTransactions"
+import AllTransactions from "../Functionality/AllTransactions/AllTransactions"
 
 const Index = () => {
     return (
         <div className="Index">
-            <h1>Index</h1>
+            <h1>Account Summary</h1>
             <AllTransactions />
         </div>
     )

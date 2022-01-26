@@ -6,7 +6,7 @@ import New from "./Pages/New"
 import Show from "./Pages/Show"
 import Edit from "./Pages/Edit"
 import FourOFour from "./Pages/FourOFour"
-import './App.css';
+import "./App.css"
 
 function App() {
   return (

@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
-import SingleTransaction from "../Functionality/SingleTransaction"
+import SingleTransaction from "../SingleTransaction"
+import "./AllTransactions.css"
 
 const AllTransactions = () => {
     const URL = process.env.REACT_APP_API_URL
@@ -14,23 +15,16 @@ const AllTransactions = () => {
                 setTransactions(response.data)
             })
     }, [URL])
-
-    const bills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
+    const moneyLeft = transactions.reduce((previousValue, currentValue) => previousValue + currentValue.amount,
+    0)
+    const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
-    console.log(bills)
 
     return (
         <div className="AllTransactions">
-            <header>
-                <div className="Money">
-                {"I'ma tip myself: $" + 
-                    transactions.reduce((previousValue, currentValue) => previousValue + currentValue.amount,
-                    0)
-                }
-                </div>
-                <div className="Bills">
-                    {"Spent on Bills: $" + bills}
-                </div>
+            <header className="Account-Summary">
+                <p>{"I'ma spend this on myself: $" + moneyLeft}</p>
+                <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
             <section>
                 <table>
