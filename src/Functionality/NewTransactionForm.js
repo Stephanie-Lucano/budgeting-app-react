@@ -22,7 +22,7 @@ const NewTransactionForm = () => {
     
     const addTransaction = (newTransaction => {
         axios
-        .put(`${URL}/transactions`, newTransaction)
+        .post(`${URL}/transactions`, newTransaction)
         .then(() => navigate("/transactions"))
     })
 
