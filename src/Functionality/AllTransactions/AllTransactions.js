@@ -20,10 +20,20 @@ const AllTransactions = () => {
     const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
 
+    const 
+
     return (
         <div className="AllTransactions">
             <header className="Account-Summary">
-                <p>{"I'ma spend this on myself: $" + moneyLeft}</p>
+                <p
+                    style={{color: "red"}}
+                >
+                    {
+                        
+                        "I'ma spend this on myself: $" + moneyLeft
+                        
+                    }
+                </p>
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
             <section>
