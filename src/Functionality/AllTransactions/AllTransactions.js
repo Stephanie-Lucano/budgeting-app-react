@@ -34,8 +34,7 @@ const AllTransactions = () => {
         <div className="AllTransactions">
             <header className="Account-Summary">
                 <p>
-                    "I'ma spend this on myself: "
-                    {flag()}
+                    I'ma spend this on myself: {flag()}
                 </p>
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
