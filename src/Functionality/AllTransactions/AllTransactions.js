@@ -17,8 +17,7 @@ const AllTransactions = () => {
     }, [URL])
     const moneyLeft = transactions.map((transaction) => Number(transaction.amount)).reduce((previousValue, currentValue) => previousValue + currentValue,
     0)
-    const spentOnBills = transactions.filter((transaction) => Number(transaction.amount) < 0).reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue),
-    0)
+    const spentOnBills = transactions.filter((transaction) => Number(transaction.amount) < 0).reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue))
 
     const flag = () => {
         if (moneyLeft >= 1000) {
