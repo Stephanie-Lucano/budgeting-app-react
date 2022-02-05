@@ -20,11 +20,21 @@ const AllTransactions = () => {
     const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
 
+    const flag = (moneyLeft) => {
+        if (moneyLeft >= 1000) {
+            return "#green"
+        } else if (moneyLeft <= 0) {
+            return "red"
+        } else {
+            return "#FCFAF6"
+        }
+    }
+
     return (
         <div className="AllTransactions">
             <header className="Account-Summary">
                 <p>
-                    I'ma spend this on myself: $<span style={{color: moneyLeft > 1000 ? "green" : "red"}}>{moneyLeft}</span>
+                    I'ma spend this on myself: $<span style={{color: flag}}>{moneyLeft}</span>
                 </p>
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
