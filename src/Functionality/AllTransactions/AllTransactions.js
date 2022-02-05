@@ -23,14 +23,8 @@ const AllTransactions = () => {
     return (
         <div className="AllTransactions">
             <header className="Account-Summary">
-                <p
-                    style={{color: "red"}}
-                >
-                    {
-                        
-                        "I'ma spend this on myself: $" + moneyLeft
-                        
-                    }
+                <p>
+                    I'ma spend this on myself: $<span style={{color: moneyLeft > 1000 ? "green" : "red"}}>moneyLeft</span>
                 </p>
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
