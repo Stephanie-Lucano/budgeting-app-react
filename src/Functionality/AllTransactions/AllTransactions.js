@@ -20,7 +20,7 @@ const AllTransactions = () => {
     const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
 
-    const flag = () => {
+    const flag = (money) => {
         if (money >= 1000) {
             return <span style={{color: "#97C1A9"}}></span>
         } else if (money <= 0) {
