@@ -26,7 +26,7 @@ const AllTransactions = () => {
         } else if (moneyLeft <= 0) {
             return <span style={{color: "red"}}>{"$"+moneyLeft}</span>;
         } else {
-            return <span style={{color: "#FCFAF6"}}>{"$"+moneyLeft}</span>
+            return <span style={{color: "#FFFFB5"}}>{"$"+moneyLeft}</span>
         }
     }
 
