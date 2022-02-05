@@ -20,10 +20,10 @@ const AllTransactions = () => {
     const spentOnBills = (transactions.filter(({amount}) => amount < 0).reduce((previousValue, currentValue) => previousValue + currentValue.amount,
     0))*-1
 
-    const flag = (moneyLeft) => {
-        if (moneyLeft >= 1000) {
+    const flag = () => {
+        if (money >= 1000) {
             return <span style={{color: "#97C1A9"}}></span>
-        } else if (moneyLeft <= 0) {
+        } else if (money <= 0) {
             return <span style={{color: "red"}}></span>
         } else {
             return <span style={{color: "#FCFAF6"}}></span>
@@ -34,7 +34,7 @@ const AllTransactions = () => {
         <div className="AllTransactions">
             <header className="Account-Summary">
                 <p>
-                    {"I'ma spend this on myself: $"+flag}
+                    {"I'ma spend this on myself: $"+flag(moneyLeft)}
                 </p>
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
