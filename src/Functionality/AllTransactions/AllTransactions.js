@@ -17,7 +17,6 @@ const AllTransactions = () => {
     }, [URL])
     const moneyLeft = transactions.map((transaction) => Number(transaction.amount)).reduce((previousValue, currentValue) => previousValue + currentValue,
     0)
-    const spentOnBills = transactions.filter((transaction) => Number(transaction.amount) < 0).reduce((previousValue, currentValue) => Number(previousValue) + Number(currentValue))
 
     const flag = () => {
         if (moneyLeft >= 1000) {
@@ -34,7 +33,6 @@ const AllTransactions = () => {
             <header className="Account-Summary">
                 <p>I'ma spend this on myself: {flag()}
                 </p>
-                <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
             <section>
                 <table>
