@@ -22,11 +22,11 @@ const AllTransactions = () => {
 
     const flag = () => {
         if (moneyLeft >= 1000) {
-            return <span style={{color: "#97C1A9"}}>{"$"+moneyLeft}</span>;
+            return <span style={{color: "#97C1A9", fontWeight: "bold"}}>{"$"+moneyLeft}</span>;
         } else if (moneyLeft <= 0) {
-            return <span style={{color: "red"}}>{"$"+moneyLeft}</span>;
+            return <span style={{color: "red", fontWeight: "bold"}}>{"$"+moneyLeft}</span>;
         } else {
-            return <span style={{color: "#FFFFB5"}}>{"$"+moneyLeft}</span>
+            return <span style={{color: "#FFFFB5", fontWeight: "bold"}}>{"$"+moneyLeft}</span>
         }
     }
 
