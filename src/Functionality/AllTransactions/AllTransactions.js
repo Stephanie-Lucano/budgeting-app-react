@@ -22,20 +22,19 @@ const AllTransactions = () => {
 
     const flag = () => {
         if (moneyLeft >= 1000) {
-            return <span style={{color: "#97C1A9"}}>{"$"+moneyLeft}</span>;
+            return <p style={{color: "#97C1A9"}}>{"$"+moneyLeft}</p>;
         } else if (moneyLeft <= 0) {
-            return <span style={{color: "red"}}>{"$"+moneyLeft}</span>;
+            return <p style={{color: "red"}}>{"$"+moneyLeft}</p>;
         } else {
-            return <span style={{color: "#FCFAF6"}}>{"$"+moneyLeft}</span>
+            return <p style={{color: "#FCFAF6"}}>{"$"+moneyLeft}</p>
         }
     }
 
     return (
         <div className="AllTransactions">
             <header className="Account-Summary">
-                <p>
-                    I'ma spend this on myself: {flag()}
-                </p>
+                <p>I'ma spend this on myself: </p>
+                    {flag()}
                 <p>{"Spent on Bills: $" + spentOnBills}</p> 
             </header>
             <section>
