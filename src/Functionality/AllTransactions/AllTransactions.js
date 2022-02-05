@@ -31,7 +31,8 @@ const AllTransactions = () => {
     }
 
     return (
-        <div className="AllTransactions">
+        <div className="AllTransactions"
+        style={{backgroundColor: "#D7EFEF"}}>
             <header className="Account-Summary">
                 <p>I'ma spend this on myself: {flag()}
                 </p>
